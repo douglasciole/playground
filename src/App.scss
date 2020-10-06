@@ -1,0 +1,156 @@
+$body-bg: #9266ff;
+$primary: #3f3160;
+$action: rgb(202, 156, 24);
+$secondary: rgb(27, 112, 137);
+$item: #bf07ac;
+$text-color: #FFFFFF;
+
+.item-text {
+    color: $text-color;
+    font-size: 15px;
+    font-family: verdana;
+}
+
+body {
+    background-color: $body-bg;
+}
+
+.App {
+    background-color: $primary;
+    min-height: 500px;
+    width: 400px;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.pkmApp {
+    @extend .App;
+    width: 90%;
+
+    .pkmAppContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+        column-gap: 60px;
+        row-gap: 50px;
+        padding: 20px 60px;
+
+        .list-item {
+            margin: 0px;
+            width: 100%;
+            min-width: 250px;
+        }
+    }
+}
+
+form {
+    input {
+        background-color: $secondary;
+        border: 0px;
+        width: 200px;
+        height: 50px;
+        padding: 0 20px;
+        margin: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        color: $text-color;
+    }
+
+    input::placeholder {
+        color: $text-color;
+    }
+
+    input:focus, button:focus {
+        outline: none;
+    }
+
+    button {
+        width: 80px;
+        height: 50px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: $action;
+        cursor: pointer;
+        font-weight: bolder;
+        color: $text-color;
+    }
+}
+
+.list-item {
+    width: 300px;
+    background-color: $item;
+    margin: 20px auto;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+
+    .container {
+        width: 95%;
+    }
+
+    p {
+        position: relative;
+        min-height: 20px;
+
+        .icon {
+            position: absolute;
+            cursor: pointer;
+            right: 12px;
+            color: $text-color;
+        }
+
+        span {
+            @extend .item-text;
+            text-decoration: line-through;
+            margin-left: 2px;
+        }
+
+        .not-cut {
+            text-decoration: none;
+        }
+
+        input[type=text] {
+            @extend .item-text;
+            background-color: $item;
+            border: 0px;
+            outline: none;
+        }
+    }
+
+    input[type=checkbox] {
+        margin-right: 5px;
+    }
+}
+
+.back-button {
+    @extend .item-text;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: $action;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pkmImageDisplay {
+    text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

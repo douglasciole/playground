@@ -1,0 +1,173 @@
+.item-text, .list-item p span, .list-item p input[type=text], .back-button {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-family: verdana;
+}
+
+body {
+  background-color: #9266ff;
+}
+
+.App, .pkmApp {
+  background-color: #3f3160;
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.pkmApp {
+  width: 90%;
+}
+
+.pkmApp .pkmAppContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 50px;
+  padding: 20px 60px;
+}
+
+.pkmApp .pkmAppContainer .list-item {
+  margin: 0px;
+  width: 100%;
+  min-width: 250px;
+}
+
+form input {
+  background-color: #1b7089;
+  border: 0px;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+form input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+form input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+form input::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+form input::placeholder {
+  color: #FFFFFF;
+}
+
+form input:focus, form button:focus {
+  outline: none;
+}
+
+form button {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #ca9c18;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #FFFFFF;
+}
+
+.list-item {
+  width: 300px;
+  background-color: #bf07ac;
+  margin: 20px auto;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list-item .container {
+  width: 95%;
+}
+
+.list-item p {
+  position: relative;
+  min-height: 20px;
+}
+
+.list-item p .icon {
+  position: absolute;
+  cursor: pointer;
+  right: 12px;
+  color: #FFFFFF;
+}
+
+.list-item p span {
+  text-decoration: line-through;
+  margin-left: 2px;
+}
+
+.list-item p .not-cut {
+  text-decoration: none;
+}
+
+.list-item p input[type=text] {
+  background-color: #bf07ac;
+  border: 0px;
+  outline: none;
+}
+
+.list-item input[type=checkbox] {
+  margin-right: 5px;
+}
+
+.back-button {
+  top: 10px;
+  left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #ca9c18;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pkmImageDisplay {
+  text-align: center;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+/*# sourceMappingURL=App.css.map */
