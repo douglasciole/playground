@@ -1,4 +1,19 @@
-.item-text, .list-item p span, .list-item p input[type=text], .back-button {
+h1 {
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+}
+
+.projectDisplay {
+  color: #FFFFFF;
+}
+
+.projectDisplay p {
+  text-align: center;
+  width: 100%;
+}
+
+.item-text, .list-item p span, .list-item p input[type=text], .back-button, .project-button {
   color: #FFFFFF;
   font-size: 15px;
   font-family: verdana;
@@ -130,7 +145,7 @@ form button {
   margin-right: 5px;
 }
 
-.back-button {
+.back-button, .project-button {
   top: 10px;
   left: 10px;
   text-decoration: none;
@@ -150,6 +165,46 @@ form button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.projects-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (120px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 120px);
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  row-gap: 50px;
+  padding: 20px 60px;
+}
+
+.project-button {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.project-button span {
+  position: absolute;
+  z-index: 1;
+  margin-top: 50px;
+  margin-left: -6px;
+  background-color: #bf07ac;
+  padding: 6px;
+  width: 100px;
+  overflow-wrap: break-word;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.project-button img {
+  position: absolute;
+  margin-top: -10px;
+  width: 100px;
+  height: 100px;
 }
 
 .pkmImageDisplay {

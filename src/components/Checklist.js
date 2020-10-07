@@ -11,6 +11,16 @@ export default class Checklist extends Component {
         }
     }
 
+    saveState = () => {
+        localStorage.setItem("todoList", JSON.stringify(this.state.taskList));
+    }
+
+    loadState = () => {
+        const mySavedList = JSON.parse(localStorage.getItem("todoList"));
+        this.setState({
+            taskList: mySavedList
+        });
+    }
 
     addTask = (e) => {
         e.preventDefault();
@@ -75,6 +85,14 @@ export default class Checklist extends Component {
 
     handleInput = (e) => {
         this.setState({currentText: e.target.value});
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        this.saveState();
+    }
+
+    componentWillMount() {
+        this.loadState();
     }
 
     render() {

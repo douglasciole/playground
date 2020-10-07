@@ -15,7 +15,7 @@ export default function ChecklistTasks(props) {
     }
 
     const listItems = items.map(item => {
-        return <div className="list-item">
+        return <div key={item.key} className="list-item">
                     <div className="container">
                         <p>
                             <Checkbox item={item} onChange={toggleTask} />
