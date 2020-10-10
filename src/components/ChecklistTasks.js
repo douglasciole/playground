@@ -13,18 +13,21 @@ export default function ChecklistTasks(props) {
                     ?<span className="noselect">{item.title}</span>
                     :<input type="text" value={item.title} onChange={(e) => {updateTask(e, item.key)}} />)
     }
+    let listItems = "";
 
-    const listItems = items.map(item => {
-        return <div key={item.key} className="list-item">
-                    <div className="container">
-                        <p>
-                            <Checkbox item={item} onChange={toggleTask} />
-                            {handleTaskDisplay(item)}
-                            <FontAwesomeIcon className="icon" icon="trash" onClick={() => {removeTask(item.key)}} />
-                        </p>
+    if (items) {
+        listItems = items.map(item => {
+            return <div key={item.key} className="list-item">
+                        <div className="container">
+                            <p>
+                                <Checkbox item={item} onChange={toggleTask} />
+                                {handleTaskDisplay(item)}
+                                <FontAwesomeIcon className="icon" icon="trash" onClick={() => {removeTask(item.key)}} />
+                            </p>
+                        </div>
                     </div>
-                </div>
-    });
+        });
+    }
 
     return (
         <div>

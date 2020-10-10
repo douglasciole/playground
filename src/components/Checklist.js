@@ -16,10 +16,12 @@ export default class Checklist extends Component {
     }
 
     loadState = () => {
-        const mySavedList = JSON.parse(localStorage.getItem("todoList"));
-        this.setState({
-            taskList: mySavedList
-        });
+        if ("todoList" in localStorage) {
+            const mySavedList = JSON.parse(localStorage.getItem("todoList"));
+            this.setState({
+                taskList: mySavedList
+            });
+        }
     }
 
     addTask = (e) => {
