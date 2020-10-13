@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChecklistTasks from './ChecklistTasks';
-import BackButton from './BackButton';
+import BackButton from '../BackButton';
 
 export default class Checklist extends Component {
     constructor(props) {

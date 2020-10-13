@@ -41,8 +41,8 @@ body {
   display: grid;
   -ms-grid-columns: (300px)[auto-fill];
       grid-template-columns: repeat(auto-fill, 300px);
-  -webkit-column-gap: 60px;
-          column-gap: 60px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
   row-gap: 50px;
   padding: 20px 60px;
 }
@@ -51,6 +51,17 @@ body {
   margin: 0px;
   width: 100%;
   min-width: 250px;
+}
+
+.button, form button {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #ca9c18;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #FFFFFF;
 }
 
 form input {
@@ -83,17 +94,6 @@ form input::placeholder {
 
 form input:focus, form button:focus {
   outline: none;
-}
-
-form button {
-  width: 80px;
-  height: 50px;
-  border-radius: 5px;
-  border: 0px;
-  background-color: #ca9c18;
-  cursor: pointer;
-  font-weight: bolder;
-  color: #FFFFFF;
 }
 
 .list-item {
@@ -170,8 +170,8 @@ form button {
 .projects-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (120px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 120px);
+  -ms-grid-columns: (100px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 100px);
   -webkit-column-gap: 60px;
           column-gap: 60px;
   row-gap: 50px;

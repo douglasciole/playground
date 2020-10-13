@@ -32,6 +32,16 @@ export default class Home extends Component {
                         <p>Displaying item with animation</p>
                         <p>Handling events</p>
                     </div>
+                    <div className="projectDisplay">
+                        <ProjectButton  
+                            img="/checklist.png"
+                            label="React Chat"
+                            to="/chat"
+                        />
+                        <p>Firebase</p>
+                        <p>Displaying item with animation</p>
+                        <p>Handling events</p>
+                    </div>
                     
                 </div>
             </>

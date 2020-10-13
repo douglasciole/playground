@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from './BackButton';
+import BackButton from '../BackButton';
 import PkmDisplay from './PkmDisplay';
 
 export default class Pokemon extends React.Component {

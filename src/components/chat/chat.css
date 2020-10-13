@@ -1,0 +1,46 @@
+.chatFooter {
+  bottom: 0px;
+}
+
+.chatContainer {
+  position: relative;
+}
+
+.messageDisplay {
+  padding: 0 20px;
+  height: 330px;
+  overflow: auto;
+}
+
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bf07ac;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.message img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.message.sent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.message.sent img {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=chat.css.map */

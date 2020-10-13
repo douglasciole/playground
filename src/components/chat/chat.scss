@@ -1,0 +1,41 @@
+$item: #bf07ac;
+$text-color: #FFFFFF;
+
+.chatFooter {
+    bottom: 0px;
+}
+
+.chatContainer {
+    position: relative;
+}
+
+.messageDisplay {
+    padding: 0 20px;
+    height: 330px;
+    overflow: auto;
+}
+
+.message {
+    display: flex;
+    background-color: $item;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    color: $text-color;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+
+    &.sent {
+        display: flex;
+        flex-direction: row-reverse;
+
+        img {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+    }
+}
